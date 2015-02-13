@@ -70,6 +70,7 @@ hostname > $run_dir/hostname
 
 cd $run_dir
 cp -r $neat_dir/src src
+cp -r $neat_dir/res res
 time $neat_cmd > neat_out
 EOF
 
