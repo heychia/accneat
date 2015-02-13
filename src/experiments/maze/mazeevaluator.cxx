@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "std.hxx"
 
 #include "mazeevaluator.h"
@@ -8,9 +9,10 @@
 #include <assert.h>
 
 //#define Truncate_Seq 2
+#define Reverse_Seq
 
-#define Max_Seq_Len 3
-#define Max_Maze_Len 26
+#define Max_Seq_Len 4
+#define Max_Maze_Len 27
 
 using namespace std;
 
@@ -168,6 +170,10 @@ namespace NEAT {
 
         vector<Config::Trial> trials;
 
+#ifdef Reverse_Seq
+        cout << "Reversing sequences" << endl;
+#endif
+        
         for(std::map<Location, Object>::iterator it = map.objects.begin();
             it != map.objects.end();
             it++) {
@@ -189,10 +195,17 @@ namespace NEAT {
                     trial.food_pos.col = obj.loc.index.col;
                     string seq = obj.attrs["seq"];
                     assert(seq.length() > 0 && seq.length() <= Max_Seq_Len);
-            
+
                     trial.seqlen = seq.length();
-                    for(size_t i = 0; i < seq.length(); i++) {
-                        char c = seq[i];
+                    
+                    string seq_played = seq;
+#ifdef Reverse_Seq
+                    std::reverse(seq_played.begin(), seq_played.end());
+#endif
+                    
+                    for(size_t i = 0; i < seq_played.length(); i++) {
+                        char c = seq_played[i];
+
                         if(c == 'l') {
                             trial.seq[i] = 0.0;
                         } else if(c == 'r') {
@@ -201,7 +214,7 @@ namespace NEAT {
                             abort();
                         }
                     }
-
+                    
 #ifdef Truncate_Seq
                     for(size_t i = Truncate_Seq; i < seq.length(); i++) {
                         trial.seq[i] = 0.5;
@@ -214,7 +227,7 @@ namespace NEAT {
                 abort();
             }
         }
-
+        
         config.ntrials = trials.size();
 
         len_ = sizeof(Config) + sizeof(Config::Trial) * config.ntrials;

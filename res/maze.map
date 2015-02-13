@@ -1,5 +1,5 @@
 ################################################################################
-[glyphs] 
+[glyphs]
 
 agent = > ^ < v
 food  = f
@@ -16,51 +16,54 @@ v dir = south
 ################################################################################
 [objects]
 
-+ABCDEFGHIJKLMNOPQRSTUVWXYZ
-A                          
-B      ~~~       ~~~       
-C      |f|       |f|        
-D      | |       | |       
-E      | ~~~~~~~~~ |        
-F      | f       f |       
-G      | ~~~~ ~~~~ |       
-H      | |  |f|  | |       
-I      |f|  | |  |f|       
-J      ~~~  | |  ~~~       
-K           | |            
-L           | |            
-M           |>|            
-N           | |            
-O           | |            
-P      ~~~  | |  ~~~       
-Q      |f|  | |  |f|       
-R      | |  |f|  | |       
-S      | ~~~~ ~~~~ |       
-T      | f       f |       
-U      | ~~~~~~~~~ |       
-V      | |       | |       
-W      |f|       |f|       
-X      ~~~       ~~~       
-Y                          
-Z                          
++ABCDEFGHIJKLMNOPQRSTUVWXYZa
+A   |~~~~~~~| |~~~~~~~|
+B   |f     f| |f     f|
+C   |~~~ ~~~| |~~~ ~~~|
+D      | |       | |
+E      | |       | |
+F      | ~~~~~~~~~ |
+G      |           |
+H      | ~~~~ ~~~~ |
+I      | |  | |  | |
+J      | |  | |  | |
+K   |~~~ ~~~| |~~~ ~~~|
+L   |f     f| |f     f|
+M   |~~~~~~~| |~~~~~~~|
+N           |>|
+O   |~~~~~~~| |~~~~~~~|
+P   |f     f| |f     f|
+Q   |~~~ ~~~| |~~~ ~~~|
+R      | |  | |  | |
+S      | |  | |  | |
+T      | ~~~~ ~~~~ |
+U      |           |
+V      | ~~~~~~~~~ |
+W      | |       | |
+X      | |       | |
+Y   |~~~ ~~~| |~~~ ~~~|
+Z   |f     f| |f     f|
+a   |~~~~~~~| |~~~~~~~|
 
 ################################################################################
 [objects-attrs]
 
-H,M f seq = l
-R,M f seq = r
- 
-F,I f seq = ll
-F,Q f seq = lr
-T,I f seq = rr
-T,Q f seq = rl
- 
-I,H f seq = lll
-C,H f seq = llr
-I,R f seq = lrr
-C,R f seq = lrl
- 
-Q,H f seq = rrr
-W,H f seq = rrl
-Q,R f seq = rll
-W,R f seq = rlr
+B,E f seq = llrl
+B,K f seq = llrr
+B,O f seq = lrll
+B,U f seq = lrlr
+
+L,E f seq = lllr
+L,K f seq = llll
+L,O f seq = lrrr
+L,U f seq = lrrl
+
+P,E f seq = rrrl
+P,K f seq = rrrr
+P,O f seq = rlll
+P,U f seq = rllr
+
+Z,E f seq = rrlr
+Z,K f seq = rrll
+Z,O f seq = rlrr
+Z,U f seq = rlrl
