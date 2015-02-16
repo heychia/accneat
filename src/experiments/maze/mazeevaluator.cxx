@@ -9,7 +9,7 @@
 #include <assert.h>
 
 //#define Truncate_Seq 2
-#define Reverse_Seq
+//#define Reverse_Seq
 
 #define Max_Seq_Len 4
 #define Max_Maze_Len 27

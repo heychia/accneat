@@ -18,52 +18,37 @@ v dir = south
 
 +ABCDEFGHIJKLMNOPQRSTUVWXYZa
 A   |~~~~~~~| |~~~~~~~|
-B   |f     f| |f     f|
+B   |       | |       |
 C   |~~~ ~~~| |~~~ ~~~|
 D      | |       | |
 E      | |       | |
 F      | ~~~~~~~~~ |
 G      |           |
 H      | ~~~~ ~~~~ |
-I      | |  | |  | |
+I      | |  |f|  | |
 J      | |  | |  | |
 K   |~~~ ~~~| |~~~ ~~~|
-L   |f     f| |f     f|
+L   |       | |       |
 M   |~~~~~~~| |~~~~~~~|
 N           |>|
 O   |~~~~~~~| |~~~~~~~|
-P   |f     f| |f     f|
+P   |       | |       |
 Q   |~~~ ~~~| |~~~ ~~~|
 R      | |  | |  | |
-S      | |  | |  | |
+S      | |  |f|  | |
 T      | ~~~~ ~~~~ |
 U      |           |
 V      | ~~~~~~~~~ |
 W      | |       | |
 X      | |       | |
 Y   |~~~ ~~~| |~~~ ~~~|
-Z   |f     f| |f     f|
+Z   |       | |       |
 a   |~~~~~~~| |~~~~~~~|
 
 ################################################################################
 [objects-attrs]
 
-B,E f seq = llrl
-B,K f seq = llrr
-B,O f seq = lrll
-B,U f seq = lrlr
+I,M f seq = l
+S,M f seq = r
 
-L,E f seq = lllr
-L,K f seq = llll
-L,O f seq = lrrr
-L,U f seq = lrrl
 
-P,E f seq = rrrl
-P,K f seq = rrrr
-P,O f seq = rlll
-P,U f seq = rllr
-
-Z,E f seq = rrlr
-Z,K f seq = rrll
-Z,O f seq = rlrr
-Z,U f seq = rlrl
