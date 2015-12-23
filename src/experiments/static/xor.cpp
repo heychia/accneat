@@ -16,7 +16,7 @@ static struct XorInit {
                             {{F, F}, {F}, weight}, // when both inputs are 0.0, the correct output is 0.0. this test weights 1.0
                     }},
                     {{
-                            {{F, T}, {T}, weight},
+                            {{F, T}, {T}, weight}, // when either one input is 0.0 but not both, the correct output is 0.0. this test also weights 1.0
                     }},
                     {{
                             {{T, F}, {T}, weight},
