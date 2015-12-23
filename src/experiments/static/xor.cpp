@@ -13,7 +13,7 @@ static struct XorInit {
 
                 vector<Test> tests = {
                     {{
-                            {{F, F}, {F}, weight},
+                            {{F, F}, {F}, weight}, // when both inputs are 0.0, the correct output is 0.0. this test weights 1.0
                     }},
                     {{
                             {{F, T}, {T}, weight},
